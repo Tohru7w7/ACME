@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('customer',function(Blueprint $table){
             $table->id();
-            $table->string('RFC',8);
+            $table->string('RFC',12);
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('address_id')->constrained('address');
             $table->timestamps();
