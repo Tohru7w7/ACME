@@ -18,3 +18,7 @@ Route::group(['prefix'=>'dashboard'],function(){
     Route::post("/blueprint",[BlueprintController::class,'createBlueprint']);
 
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
